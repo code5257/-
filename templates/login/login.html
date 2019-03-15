@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href={% static "login/css/login.css" %}/>
+    <script type="text/javascript" src={% static "login/js/jquery-1.12.3.js" %}></script>
+    <script type="text/javascript" src={% static "login/js/jquery.cookie.js" %}></script>
+    <script type="text/javascript" src={% static "login/js/login.js" %}></script>
+</head>
+<body>
+<!--头部-->
+<div class="homepage">
+    <div class="header">
+        <a href="#"><img src="{% static 'img/logo_mo.jpg' %}" alt=""></a>
+    </div>
+    <div class="login-con">
+        <div class="login-ban">
+            <a href="#"><img src="{% static 'img/login_bg.jpg' %}"></a>
+        </div>
+        <div class="login-content">
+            <!--图片-->
+            <div class="loginpic">
+                <a href="#"><img src="{% static 'img/top-right.jpg' %}"></a>
+            </div>
+            <div class="login_tab">
+                <div class="normal">
+                    <a href="#">普通登录</a>
+                </div>
+                <div class="phonelogin">
+                    <a href="#">手机无密码登录</a>
+                </div>
+            </div>
+            <!--正常登录-->
+            <div class="login_form">
+                <form action="#" method="post">
+                    {% if eero1 %}
+                        <p class="erro_info">此用户不存在</p>
+                    {% endif %}
+                    <input type="text" placeholder="请输入用户名" class="login_name" name="username"><br>
+                    {% if eero2 %}
+                        <p class="erro_info">密码错误</p>
+                    {% endif %}
+                    <input type="password" placeholder="请输入6~18位密码" class="login_pwd" name="password">
+                    <div class="login_info">
+                        <p class="aotulogin"><input type="checkbox" checked="true"><span>三天内自动登录</span></p>
+                        <a href="#">忘记密码？</a>
+                    </div>
+                    <input type="submit" value="登录" class="loginBtn">
+                    <div class="login_bottom">
+                        <a href="#" class="haiwai">海外手机登录</a>
+                        <a href={% url 'mgj:register' %} class="newUser">新用户注册</a>
+                    </div>
+                    <p class="login_way">你也可以用一下方式登录：</p>
+                    <ul class="login_pic">
+                        <li><a href="#"><img src="{% static 'img/qq.jpg' %}"></a></li>
+                        <li><a href="#"><img src="{% static 'img/weixin.jpg' %}"></a></li>
+                        <li><a href="#"><img src="{% static 'img/block.jpg' %}"></a></li>
+                    </ul>
+                    <p class="hottip">
+                        *除腾讯以外的其它三方登录即将关闭，届时请使用手机/昵称/QQ/微信进行登录
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!--二维码登录-->
+        <div class="-hidden">
+            <a href="#" class="tonormal"><img src="{% static 'img/top_right1.png' %}"></a>
+            <div class="scan_login"></div>
+            <div class="midcode">
+						<span class="center">
+							<img src="{% static 'img/center.jpg' %}">
+						</span>
+            </div>
+            <a href="#" class="load">点击下载蘑菇街APP</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerList">
+            <div class="code-fr">
+                <h3>蘑菇街移动客户端</h3>
+                <a href="#"><img src="{% static 'img/bg-fr.jpg' %}"></a>
+            </div>
+            <ul class="link_list">
+                <li>
+                    <h3>新手帮助</h3>
+                    <a href="#">如何购买</a>
+                    <a href="#">支付教程</a>
+                    <a href="#">优惠券使用</a>
+                    <a href="#">常见问题</a>
+                </li>
+                <li>
+                    <h3>权益保障</h3>
+                    <p>7天无理由退货</p>
+                    <p>退货运费补贴</p>
+                    <p>72小时发货</p>
+                </li>
+                <li>
+                    <h3>商家服务</h3>
+                    <a href="#">免费开店</a>
+                    <a href="#">商家社区</a>
+                    <a href="#">商家入驻</a>
+                    <a href="#">管理后台</a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">
+            ©Copyright&nbsp;2010-2016蘑菇街 Mogujie.com&nbsp;(增值电信业务经营许可证：浙B2-2110349)
+        </p>
+    </div>
+</div>
+
+
+</body>
+</html>

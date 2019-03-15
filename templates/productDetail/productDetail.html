@@ -1,0 +1,464 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src={% static 'productDetail/js/jquery-1.12.3.js' %}></script>
+    <link href={% static "productDetail/css/details.css" %} rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src={% static "productDetail/js/details.js" %}></script>
+    <script type="text/javascript" src={% static "productDetail/js/jquery.cookie.js" %}></script>
+</head>
+<body class=".media_screen_1200">
+<!--右边导航栏-->
+<div class="right_bar">
+    <div class="blank_div"></div>
+    <!--购物车-->
+    <div class="my_cart" style="left: 0px;">
+        <a href="#">
+            <div class="s-txt">购物车</div>
+        </a>
+    </div>
+    <!--优惠券-->
+    <div class="youhuiquan">
+        <a href="#">
+            <div class="s-txt">优惠券</div>
+        </a>
+    </div>
+    <!--钱包-->
+    <div class="qianbao">
+        <a href="#">
+            <div class="s-txt">钱包</div>
+        </a>
+    </div>
+    <!--足迹-->
+    <div class="zuji">
+        <a href="#">
+            <div class="s-txt">足迹</div>
+        </a>
+    </div>
+    <!--回到顶部-->
+    <div class="goTop">
+        <a href="#">
+            <div class="s-txt">Top</div>
+        </a>
+    </div>
+</div>
+<!--顶部-->
+<div class="header">
+    <div class="header-con">
+        <a href="#" class="home-fl">蘑菇街首页</a>
+        <ul class="nav_list">
+            {% if user %}
+                <li class="show_register">
+                    <a href='#'>用户名：{{ user.username }}</a>
+                </li>
+                <li class="show_login">
+                    <a href={% url 'mgj:logout' %}>注销&nbsp;|</a>
+                </li>
+            {% else %}
+                <li class="show_register">
+                    <a href={% url 'mgj:register' %}>注册</a>
+                </li>
+                <li class="show_login">
+                    <a href={% url 'mgj:login' %}>登录&nbsp;|</a>
+                </li>
+            {% endif %}
+            <li class="myorder">
+                <img src="{% static 'img/top_nav2.jpg' %}" alt="">
+                <a href="#">我的订单&nbsp;|</a>
+            </li>
+            <li class="shoppingcar">
+                <img src="{% static 'img/top_car.jpg' %}" alt="" style="width:14px; height: 14px;">
+                <a href="#">购物车&nbsp;|</a>
+                <div class="empty_cart">购物车里没有商品</div>
+            </li>
+            <li class="customer_service">
+                <a href="#">客户服务&nbsp;|</a>
+                <ul class="service_none">
+                    <li><a href="#">消费者服务</a></li>
+                    <li><a href="#">商家服务</a></li>
+                    <li><a href="#">规则中心</a></li>
+                </ul>
+            </li>
+            <li class="xiaodian">
+                <img src="{% static 'img/top_nav3.jpg' %}" alt="" style="width:14px; height: 14px;">
+                <a href="#">我的小店</a>
+                <ul class="myxiaodian">
+                    <li><a href="#">管理后台</a></li>
+                    <li><a href="#">商家社区</a></li>
+                    <li><a href="#">商家培训</a></li>
+                    <li><a href="#">市场入住</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--店铺信息-->
+<div class="shopheader">
+    <div class="shopcon">
+        <div class="user-info">
+            <a href="#" title="" class="shoplogo">
+                <img src="{% static 'detailsImg/shoplogo.jpg' %}">
+            </a>
+            <div class="shopname">
+                <div class="name">
+                    <a href="#" class="name_fl">艾尚女鞋</a>
+                    <p class="mark">
+                        <img src="{% static 'detailsImg/renzheng.jpg' %}">
+                    </p>
+                </div>
+                <!--评分信息-->
+                <div class="shop_scroe">
+                    <div class="left_star"></div>
+                    <p>
+								<span class="s-cat">
+									描述
+									<b>4.73</b>
+								</span>
+                        <span class="s-cat">
+									价格
+									<b>4.71</b>
+								</span>
+                        <span class="s-cat">
+									质量
+									<b>4.70</b>
+								</span>
+                        <span class="s-cat">
+									服务
+									<b>4.73</b>
+								</span>
+                    </p>
+                    <!--下拉列表-->
+                    <div class="shop_info">
+                        <div class="info_box_fl">
+                            <ol class="li1">
+                                <li>
+                                    <span class="tag">所在地区：</span>
+                                    河南省郑州市
+                                </li>
+                                <li>
+                                    <span class="tag">商品数：</span>
+                                    41
+                                </li>
+                                <li>
+                                    <span class="tag">收藏数：</span>
+                                    1946
+                                </li>
+                                <li>
+                                    <span class="tag">销售量：</span>
+                                    23373
+                                </li>
+                                <li>
+                                    <span class="tag">创建时间：</span>
+                                    2015年6月12日
+                                </li>
+                                <li>
+                                    <span class="tag">店铺保证金：</span>
+                                    已缴纳
+                                </li>
+                                <li>
+                                    <img src="{% static 'detailsImg/mogujierenzheng.png' %}" class="moguimg">
+                                </li>
+                                <li class="tc">
+                                    <a href="#" class="godetail">查看详情</a>
+                                </li>
+                            </ol>
+                        </div>
+                        <ol class="li2">
+                            <li class="title">动态评分</li>
+                            <li>
+                                描述相符：
+                                <span class="num">4.62</span>
+                            </li>
+                            <li>
+                                质量满意：
+                                <span class="num">4.32</span>
+                            </li>
+                            <li>
+                                价格合理：
+                                <span class="num">4.82</span>
+                            </li>
+                            <li>
+                                服务周到：
+                                <span class="num">4.62</span>
+                            </li>
+                        </ol>
+                        <ol class="li3">
+                            <li class="title">比同行平均</li>
+                            <li>
+                                <span class="tag-up">高</span>
+                                <span class="num">4.41</span>
+                            </li>
+                            <li>
+                                <span class="tag-up">高</span>
+                                <span class="num">4.42</span>
+                            </li>
+                            <li>
+                                <span class="tag-up">高</span>
+                                <span class="num">4.41</span>
+                            </li>
+                            <li>
+                                <span class="tag-up">高</span>
+                                <span class="num">4.46</span>
+                            </li>
+                        </ol>
+                        <ol class="li4">
+                            <li class="title">本店</li>
+                            <li>
+                                发货时间：
+                                <span>0.48</span>天
+                            </li>
+                            <li>
+                                退货率：
+                                <span class="low">0.78</span>%
+                            </li>
+                            <li>
+                                有效投诉率：
+                                <span class="num">0.00</span>%
+                            </li>
+                        </ol>
+                        <ol class="li5">
+                            <li class="title">行业</li>
+                            <li>0.83%</li>
+                            <li>0.43%</li>
+                            <li>0.03%</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="shop_action">
+                    <div class="collect"><span>+</span>收藏</div>
+                    <div class="phone"></div>
+                </div>
+                <div class="next_list"></div>
+                <div class="fr-div"></div>
+            </div>
+        </div>
+        <div class="shop-search">
+            <input type="text" class="txt_fl" placeholder="输入你想要的商品">
+            <input type="submit" class="submit_btn" value="搜全站">
+            <a href="#" class="search-inshop">搜本店</a>
+        </div>
+    </div>
+</div>
+<!--头部广告-->
+<div class="shopBanner">
+
+</div>
+<!--头部导航-->
+<div class="nav">
+    <div class="nav-con">
+        <ul class="nav-list">
+            <li><a href="#">首页</a></li>
+            <li class="all"><a href="#">全部商品</a></li>
+            <li><a href="#">店长推荐款</a></li>
+            <li><a href="#">九月上新</a></li>
+        </ul>
+        <div class="sec_list">
+            <dl>
+                <dd><a href="#">店长推荐款</a></dd>
+                <dd><a href="#">运动鞋</a></dd>
+                <dd><a href="#">女单鞋</a></dd>
+                <dd><a href="#">9月上新</a></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<!--产品细节-->
+<div class="details">
+    <div class="rebig">
+
+    </div>
+    <div class="pro_detail">
+        <div class="left_box">
+            <div class="pic_box">
+                <div class="bigImg">
+                    <img src={% static  product.smallImg %} alt="">
+                    <div class="smallArea"></div>
+                </div>
+                <div class="smallImg">
+{#                    <img src={% static  product.smallImg %} alt="">#}
+                </div>
+            </div>
+            <div class="product-info">
+                <h1 class="goodstitle">
+                    <span></span>
+                </h1>
+                <div class="goodmain" productid={{ product.id }}>
+                    <div class="price-show">
+                        <span class="price">价格：{{ product.oldprice }}</span>
+                        <span class="oldprice"></span>
+                    </div>
+                    <div class="bigsale">
+                        <div class="fl">
+                            <span class="saleprice">促销价:{{ product.price }}</span>
+                            <span class="price"></span>
+                        </div>
+                        <div class="fr">
+                            <span class="comment">评价：</span>
+                            <span class="num">101</span>
+                            <span>累计销量：</span>
+                            <span class="salenum"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <span class="service_men">客服：</span>
+                    <span class="service_pic"></span>
+                </div>
+                <div class="pro-style">
+                    <span>款式:</span>
+                    <ul class="small-img">
+                        <li style="border-color: rgb(207, 207, 207);">
+                            <img src="{% static 'detailsImg/smallImg01.jpg' %}">
+                        </li>
+                        <li style="border-color: rgb(207, 207, 207);"><img
+                                src="{% static 'detailsImg/smallImg02.jpg' %}"></li>
+                        <li style="border-color: rgb(207, 207, 207);"><img
+                                src="{% static 'detailsImg/smallImg03.jpg' %}"></li>
+                        <li style="border-color: rgb(207, 207, 207);"><img
+                                src="{% static 'detailsImg/smallImg04.jpg' %}"></li>
+                    </ul>
+                </div>
+                <div class="size">
+                    <span>尺码:</span>
+                    <ul class="each-size">
+                        <li style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">S</li>
+                        <li style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">M</li>
+                        <li style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">L</li>
+                        <li style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">XL</li>
+                    </ul>
+                </div>
+                <div class="count">
+                    <span>数量：</span>
+                    <span class="minus"></span>
+                    <input type="text" value="1" class="countnum">
+                    <span class="plus"></span>
+                    <span class="store">库存<b class="storenum">{{ product.store }}</b>件</span>
+                </div>
+                <div class="btn">
+                    <a href="#" class="buynow">立刻购买</a>
+
+{#                    <a href="#" class="addtocart">加入购物车</a>#}
+                    <button class="addtocart">加入购物车</button>
+                </div>
+                <div class="share">
+                    <div class="sharenum">
+                        <b></b>
+                        <span class="fav-num">39899</span>
+                    </div>
+                    <div class="sharenow">
+                        <b></b>
+                        分享
+                    </div>
+                    <div class="report">
+                        <a href="#">举报</a>
+                    </div>
+                </div>
+                <div class="dianpuinfo">
+                    <div class="shop-special">
+                        <span class="shop-special-title">商品特色：</span>
+                        <b></b>
+                        <span class="shop-special-link">蘑菇良品</span>
+                    </div>
+                    <div class="payway">
+                        <div class="payway-fl">支付方式：</div>
+                        <div class="payway-fr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_box">
+            <p class="title">
+                <s></s>
+                <span>热卖推荐</span>
+            </p>
+            <div class="list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'detailsImg/right01.jpg' %}" alt="">
+                            <h3>￥29.98</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'detailsImg/right02.jpg' %}" alt="">
+                            <h3>￥99.98</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{% static 'detailsImg/right03.jpg' %}" alt="">
+                            <h3>￥49.08</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--尾部-->
+<div class="footer">
+    <div class="footerlink">
+        <div class="foot-info">
+            <a href="#" class="info_logo"></a>
+            <div class="info-text">
+                <p>
+                    营业执照注册号:
+                    <a href="#" class="nofollow">330106000129004</a>
+                </p>
+                <p>
+                    增值电信业务经营许可证:
+                    <a href="#" class="nofollow">浙B2-20110349</a>
+                </p>
+                <p style="height: auto;">
+                    网络文化经营许可证:
+                    <a href="#" class="nofollow">浙网文(2016)0349-219号</a>
+                </p>
+                <p>
+                    <a href="#" class="nofollow">安全责任书</a>
+                </p>
+                <p>
+                    <a href="#" style="display: inline-block; height: 20px; line-height: 20px;">
+                        <img src="{% static 'detailsImg/gongan.jpg' %}" style="float: left;">
+                        <span style="color: #999;">&nbsp;浙公安网备 33010602002329</span>
+                    </a>
+                </p>
+                <p>©2016 Mogujie.com 杭州卷瓜网络有限公司</p>
+            </div>
+        </div>
+        <div class="foot-link">
+            <dl class="link_company">
+                <dt>公司</dt>
+                <dd><a href="#">关于我们</a></dd>
+                <dd><a href="#">招聘信息</a></dd>
+                <dd><a href="#">练习我们</a></dd>
+            </dl>
+            <dl class="link_consumer">
+                <dt>消费者</dt>
+                <dd><a href="#">消费者服务</a></dd>
+                <dd><a href="#">意见反馈</a></dd>
+                <dd><a href="#">手机版下载</a></dd>
+            </dl>
+            <dl class="link_business">
+                <dt>商家</dt>
+                <dd><a href="#">商家入驻</a></dd>
+                <dd><a href="#">商家后台</a></dd>
+                <dd><a href="#">蘑菇商学院</a></dd>
+                <dd><a href="#">商家社区</a></dd>
+            </dl>
+            <dl class="link_safe">
+                <dt>权威认证</dt>
+                <dd>
+                    <a href="#" class="pa"></a>
+                    <a href="#"></a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+</body>
+</html>

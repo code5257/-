@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src={% static "shopping/js/jquery-1.12.3.js" %} ></script>
+		<link href={% static "shopping/css/cart.css" %} rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src={% static "shopping/js/jquery.cookie.js" %} ></script>
+		<script type="text/javascript" src={% static "shopping/js/cart.js" %} ></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-con">
+				<a href="#" class="home-fl">蘑菇街首页</a>
+				<ul class="nav_list">
+					<li class="show_register">
+						<a href="#">注册</a>
+					</li>
+					<li class="show_login">
+						<a href="#">登录&nbsp;|</a>
+					</li>
+					<li class="myorder">
+						<img src="{% static 'img/top_nav2.jpg' %}" alt="">
+						<a href="#">我的订单&nbsp;|</a>
+					</li>
+					<li class="shoppingcar">
+						<img src="{% static 'img/top_car.jpg' %}" alt="" style="width:14px; height: 14px;">
+						<a href="#">购物车&nbsp;|</a>
+						<div class="empty_cart"></div>
+					</li>
+					<li class="customer_service">
+						<a href="#">客户服务&nbsp;|</a>
+						<ul class="service_none">
+							<li><a href="#">消费者服务</a></li>
+							<li><a href="#">商家服务</a></li>
+							<li><a href="#">规则中心</a></li>
+						</ul>
+					</li>
+					<li class="xiaodian">
+						<img src="{% static 'img/top_nav3.jpg' %}" alt="" style="width:14px; height: 14px;">
+						<a href="#">我的小店</a>
+						<ul class="myxiaodian">
+							<li><a href="#">管理后台</a></li>
+							<li><a href="#">商家社区</a></li>
+							<li><a href="#">商家培训</a></li>
+							<li><a href="#">市场入住</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="body_wrap">
+			<div class="banner">
+				<div class="banner-con">
+					<div class="logo-cart"></div>
+					<div class="process-bar">
+						<div class="process-steps">
+							<div class="done-steps"></div>
+							<i class="steps steps1">
+								1
+								<span class="tips">购物车</span>
+							</i>
+							<i class="steps steps2">
+								2
+								<span class="tips">确认订单</span>
+							</i>
+							<i class="steps steps3">
+								3
+								<span class="tips">支付</span>
+							</i>
+							<i class="steps steps4">
+								4
+								<span class="tips">完成</span>
+							</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cart-con">
+				<!--不为空-->
+					<table class="cartlist" border="1px">
+						<thead>
+							<tr>
+								<th class="select">
+									<input type="checkbox" name="check" class="checkall">
+									<label>全选</label>
+								</th>
+								<th class="tablegood">商品</th>
+								<th class="goodsinfo">商品信息</th>
+								<th>单价（元）</th>
+								<th class="goodnum">数量</th>
+								<th class="goodssum">小计</th>
+								<th class="goodsctrl">操作</th>
+							</tr>
+						</thead>
+						<tbody class="data-con">
+
+						</tbody>
+					</table>
+
+				<!--空-->
+				<div class="cartEmpty">
+					<div class="cart_logo"></div>
+					<h5>您的购物车还是空的，赶快去挑选商品吧！</h5>
+					<ul class="cartEmpty-list">
+						<li>
+							去看看大家都喜欢的
+							<a href="#" class="cartlink">潮流单品</a>
+						</li>
+						<li>
+							去看看正在折扣中的优品
+							<a href="#" class="cartlink">团购</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="deleteall">全部删除</a>
+			</div>
+		</div>
+		<!--尾部-->
+		<div class="footer">
+			<p class="copyright">
+				<a href="#">蘑菇街</a>|
+				<a href="#">加入开放平台</a>|
+				©2016Mogujie.com,All RightS Reserve.
+			</p>
+			<div class="icons">
+				<a href="#" class="vs"></a>
+				<a href="#" class="mc"></a>
+				<a href="#" class="up"></a>
+				<a href="#" class="pa"></a>
+				<a href="#" class="kx"></a>
+				<a href="#" class="pc"></a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,668 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="{% static 'mainPage/js/jquery-1.12.3.js' %}"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href={% static 'mainPage/css/swiper 3.4.2.min.css' %}>
+    <link href={% static "mainPage/css/common.css" %} rel="stylesheet" type="text/css"/>
+    <link href={% static "mainPage/css/mainPage.css" %} rel="stylesheet" type="text/css"/>
+
+    <!-- Swiper JS -->
+    <script src={% static 'mainPage/js/swiper 3.4.2.min.js' %}></script>
+    <script type="text/javascript" src={% static "mainPage/js/jquery.cookie.js" %}></script>
+    <script type="text/javascript" src={% static "mainPage/js/mainPage.js" %}></script>
+
+</head>
+<body>
+<!--置顶头部-->
+<div class="top_container">
+    <div class="top_content">
+        <a href="#" class="logo"><img src="{% static 'img/logo_mo.png' %}"></a>
+        <div class="searchBox">
+            <div class="search_pro">
+                <span class="selected"><a href="#">搜商品</a></span>
+                <ol>
+                    <li><a href="#">商品</a></li>
+                    <li><a href="#">店铺</a></li>
+                </ol>
+            </div>
+            <input type="text" value="韩版牛仔裤" class="search_box">
+            <input type="button" value="搜索" class="searchBtn">
+        </div>
+    </div>
+</div>
+<!--头部-->
+<div class="header">
+    <div class="header_nav">
+        <ul class="nav_list">
+            {% if user %}
+                <li class="show_register">
+                    <a href='#'>用户名：{{ user.username }}</a>
+                </li>
+                <li class="show_login">
+                    <a href={% url 'mgj:logout' %}>注销&nbsp;|</a>
+                </li>
+            {% else %}
+                <li class="show_register">
+                    <a href={% url 'mgj:register' %}>注册</a>
+                </li>
+                <li class="show_login">
+                    <a href={% url 'mgj:login' %}>登录&nbsp;|</a>
+                </li>
+            {% endif %}
+
+
+
+
+
+            <li class="myorder">
+                <img src="{% static 'img/top_nav2.jpg' %}" alt="">
+                <a href="#">我的订单&nbsp;|</a>
+            </li>
+            <li class="shoppingcar">
+                <img src="{% static 'img/top_car.jpg' %}" alt="" style="width:14px; height: 14px;">
+                <a href="#">购物车&nbsp;|</a>
+                <div class="empty_cart">购物车里没有商品</div>
+            </li>
+            <li class="customer_service">
+                <a href="#">客户服务&nbsp;|</a>
+                <ul class="service_none">
+                    <li><a href="#">消费者服务</a></li>
+                    <li><a href="#">商家服务</a></li>
+                    <li><a href="#">规则中心</a></li>
+                </ul>
+            </li>
+            <li class="xiaodian">
+                <img src="{% static 'img/top_nav3.jpg' %}" alt="" style="width:14px; height: 14px;">
+                <a href="#">我的小店</a>
+                <ul class="myxiaodian">
+                    <li><a href="#">管理后台</a></li>
+                    <li><a href="#">商家社区</a></li>
+                    <li><a href="#">商家培训</a></li>
+                    <li><a href="#">市场入住</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="header_container">
+        <div class="logo_fl">
+            <a href="#"><img src="{% static 'img/logo_mo.jpg' %}"></a>
+        </div>
+        <div class="search_fl">
+            <div class="search_innerBox">
+                <div class="select_box">
+                    <span class="selected">搜商品</span>
+                    <ul class="-hide">
+                        <li><a href="#">商品</a></li>
+                        <li><a href="#">店铺</a></li>
+                    </ul>
+                </div>
+                <input type="text" value="韩版牛仔裤" class="sertxt">
+                <input type="submit" value="搜索" class="serbtn">
+            </div>
+            <div class="hotwords">
+                <a href="#">秋季连衣裙</a>
+                <a href="#">小白鞋</a>
+                <a href="#">长袖T恤</a>
+                <a href="#">牛仔裤</a>
+                <a href="#">卫衣</a>
+                <a href="#">斜挎包</a>
+                <a href="#">打底裤</a>
+                <a href="#">短靴</a>
+                <a href="#">秋季...</a>
+            </div>
+        </div>
+        <div class="gif_fr">
+            <img src="{% static 'img/code.jpg' %}" alt="">
+        </div>
+        <div class="bottom_nav">
+            <ul class="nav_list">
+                <li class="home">全部商品</li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">快抢</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--头部结束-->
+<!--轮播开始-->
+<div class="banner">
+    <div class="banner_container">
+        <!--右侧导航-->
+        <div class="primary_nav">
+            <ul class="primary_nav_list">
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">上衣</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">秋上新|</a>
+										<a href="#">衬衫|</a>
+										<a href="#">针织衫</a>
+									</span>
+                        </dd>
+                    </dl>
+                    <div class="nav_more">
+                        <dl class="nav_more_con">
+                            <dt>
+                                <a href="#">秋季热卖</a>
+                            </dt>
+                            <dd>
+                                <a href="#" class="hot">卫衣</a>
+                                <a href="#">时尚套装</a>
+                                <a href="#">棒球外套</a>
+                                <a href="#" class="hot">风衣</a>
+                                <a href="#">牛仔外套</a>
+                                <a href="#">皮衣</a>
+                                <a href="#">薄外套</a>
+                                <a href="#">开衫</a>
+                                <a href="#">马甲</a>
+                                <a href="#">毛呢外套</a>
+                                <a href="#">毛衣</a>
+                            </dd>
+                        </dl>
+                        <dl class="nav_more_con">
+                            <dt>
+                                <a href="#">换季热卖</a>
+                            </dt>
+                            <dd>
+                                <a href="#">T恤</a>
+                                <a href="#">雪纺纱</a>
+                                <a href="#">蕾丝衫</a>
+                                <a href="#" class="hot">衬衫</a>
+                                <a href="#">背心吊带</a>
+                                <a href="#">娃娃衫</a>
+                                <a href="#">针织薄衫</a>
+                                <a href="#">情侣装</a>
+                            </dd>
+                        </dl>
+                        <dl class="nav_more_con">
+                            <dt>
+                                <a href="#">潮流新品</a>
+                            </dt>
+                            <dd>
+                                <a href="#">短款上衣</a>
+                                <a href="#">喇叭袖</a>
+                                <a href="#" class="hot">纯白衬衫</a>
+                                <a href="#">纯色T恤</a>
+                                <a href="#" class="hot">一字领</a>
+                                <a href="#">时尚挂脖</a>
+                                <a href="#">绑带衬衫</a>
+                                <a href="#">甜美荷叶边</a>
+                                <a href="#">前短后长</a>
+                            </dd>
+                        </dl>
+                        <div class="nav_more_pic">
+                            <img src="{% static 'img/nav_more.jpg' %}">
+                        </div>
+                    </div>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">裙子</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">连衣裙|</a>
+										<a href="#">半身裙|</a>
+										<a href="#" class="hot">针织裙</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">裤子</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">牛仔裤|</a>
+										<a href="#">打底裤|</a>
+										<a href="#">阔腿裤</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">内衣</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">热销榜|</a>
+										<a href="#">睡衣套装|</a>
+										<a href="#">内裤</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">鞋子</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">运动鞋|</a>
+										<a href="#">单鞋|</a>
+										<a href="#" class="hot">秋上新</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">男友</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">早秋新品|</a>
+										<a href="#">九分裤|</a>
+										<a href="#" class="hot">卫衣</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">包包</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">秋上新|</a>
+										<a href="#" class="hot">女包|</a>
+										<a href="#">男包</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">运动</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">运动套装|</a>
+										<a href="#">运动鞋|</a>
+										<a href="#" class="hot">卫衣</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">美妆</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">补水保湿|</a>
+										<a href="#">面膜|</a>
+										<a href="#">BB霜</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">配饰</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">早秋围巾|</a>
+										<a href="#">项链|</a>
+										<a href="#">配饰</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">家居</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#">新品|</a>
+										<a href="#" class="hot">四件套|</a>
+										<a href="#">小家具</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">母婴</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">秋季热销|</a>
+										<a href="#">童装|</a>
+										<a href="#">孕妇装</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">零食</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#">休闲零食|</a>
+										<a href="#" class="hot">进口|</a>
+										<a href="#" class="hot">肉食</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="primary_nav_li">
+                    <dl class="nav_con">
+                        <dt>
+                            <a href="#">百货</a>
+                        </dt>
+                        <dd>
+									<span>
+										<a href="#" class="hot">新品|</a>
+										<a href="#">玻璃杯|</a>
+										<a href="#" class="hot">晴雨伞</a>
+									</span>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="primary_main">
+            <div class="slide_pic">
+                <ul class="lunbo">
+
+                </ul>
+
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#"><img src="{% static 'img/lb1.jpg' %}" alt=""></a></div>
+
+                        <div class="swiper-slide"><a href="#"><img src="{% static 'img/lb2.jpg' %}" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="{% static 'img/lb3.jpg' %}" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="{% static 'img/lb4.jpg' %}" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="{% static 'img/lb5.jpg' %}" alt=""></a></div>
+
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+            </div>
+            <div class="banner_fr">
+                <ul class="sale_list">
+                    <li class="sale_li"><img src={% static "img/ban_r1.jpg" %}></li>
+                    <li class="sale_li"><img src={% static "img/ban_r2.jpg" %}></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <div class="tuangou">
+        <div class="con_fl">
+            <a href="#"><img src="{% static 'img/tuan1.jpg' %}"></a>
+        </div>
+        <div class="con_mid">
+            <div class="con_mid_fl">
+                <a href="#"><img src="{% static 'img/tuan2.jpg' %}"></a>
+            </div>
+            <div class="con_mid_fr">
+                <a href="#"><img src="{% static 'img/tuan3.jpg' %}"></a>
+            </div>
+        </div>
+        <div class="con_rig">
+            <a href="#"><img src="{% static 'img/tuan4.jpg' %}"></a>
+            <a href="#"><img src="{% static 'img/tuan5.jpg' %}"></a>
+        </div>
+    </div>
+</div>
+<!--产品展示内容-->
+<div class="pro_logo_container">
+    {% for product in products %}
+        <div class="pro_brand">
+            <div class="pro_brand_fl">
+                <a href="#"><img src={{ goods0.img }} alt=""></a>
+                <div class="look">
+                    去看看
+                </div>
+
+            </div>
+            <div class="pro_brand_mid">
+                <div class="pro_brand_mid_fl"><img src={{ goods1.img }} alt=""></div>
+                <div class="pro_brand_mid_fr">
+                    <div class="mid_fr_top"><img src={{ goods2.img }} alt=""></div>
+                    <div class="mid_fr_bottom"><img src={{ goods3.img }} alt=""></div>
+                </div>
+            </div>
+            <div class="pro_brand_fr"><a href="#"><img src={% static product.img %} alt=""></a></div>
+        </div>
+    {% endfor %}
+
+
+
+
+
+    {#    <div class="pro_brand">#}
+    {#        <div class="pro_brand_fl">#}
+    {#            <div class="look">去看看</div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_mid">#}
+    {#            <div class="pro_brand_mid_fl"></div>#}
+    {#            <div class="pro_brand_mid_fr">#}
+    {#                <div class="mid_fr_top"></div>#}
+    {#                <div class="mid_fr_bottom"></div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_fr"></div>#}
+    {#    </div>#}
+    {#    <div class="pro_brand">#}
+    {#        <div class="pro_brand_fl">#}
+    {#            <div class="look">去看看</div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_mid">#}
+    {#            <div class="pro_brand_mid_fl"></div>#}
+    {#            <div class="pro_brand_mid_fr">#}
+    {#                <div class="mid_fr_top"></div>#}
+    {#                <div class="mid_fr_bottom"></div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_fr"></div>#}
+    {#    </div>#}
+    {#    <div class="pro_brand">#}
+    {#        <div class="pro_brand_fl">#}
+    {#            <div class="look">去看看</div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_mid">#}
+    {#            <div class="pro_brand_mid_fl"></div>#}
+    {#            <div class="pro_brand_mid_fr">#}
+    {#                <div class="mid_fr_top"></div>#}
+    {#                <div class="mid_fr_bottom"></div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_fr"></div>#}
+    {#    </div>#}
+    {#    <div class="pro_brand">#}
+    {#        <div class="pro_brand_fl">#}
+    {#            <div class="look">去看看</div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_mid">#}
+    {#            <div class="pro_brand_mid_fl"></div>#}
+    {#            <div class="pro_brand_mid_fr">#}
+    {#                <div class="mid_fr_top"></div>#}
+    {#                <div class="mid_fr_bottom"></div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div class="pro_brand_fr"></div>#}
+    {#    </div>#}
+</div>
+<!--猜你喜欢-->
+<div class="guessLike">
+    <div class="bg_imgbox">
+        <img src="{% static 'img/likepic.jpg' %}">
+    </div>
+</div>
+
+<!--产品列表-->
+<div class="product_container">
+    <ul class="content">
+        {% for product in products %}
+            <div class="each_box">
+                <a href={% url 'mgj:productDetail' product.id %}>
+                    <img src={% static product.img %} alt="">
+                    <p>{{ product.name }}</p>
+                    <div>
+                        <b>￥{{ product.price }}</b>
+                        <span>{{ product.status }}</span>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+
+        {% for good in goods %}
+            <div class="each_box">
+                <img src={{ good.img }} alt="">
+                <p>{{ good.decription }}</p>
+            </div>
+        {% endfor %}
+
+
+    </ul>
+</div>
+<!--尾部-->
+<div class="bottom">
+    <div class="bottom-content">
+        <div class="content-info">
+            <a href="#"><img src="{% static 'img/logo_mo.png' %}"></a>
+            <div class="info-text">
+                <p>
+                    营业执照注册号：330106000129004
+                </p>
+                <p>
+                    增值电信业务经营许可证
+                </p>
+                <p>
+                    网络文化经营许可证
+                </p>
+                <p>安全责任书</p>
+                <p>浙公网安备 330106022002392</p>
+                <p>©2016 Mogujie.com 杭州瓜网络有限公司</p>
+            </div>
+        </div>
+        <div class="content-link">
+            <dl>
+                <dt>公司</dt>
+                <dd>关于我们</dd>
+                <dd>招聘信息</dd>
+                <dd>联系我们</dd>
+            </dl>
+            <dl>
+                <dt>消费者</dt>
+                <dd>消费者服务</dd>
+                <dd>意见反馈</dd>
+                <dd>手机版下载</dd>
+            </dl>
+            <dl>
+                <dt>商家</dt>
+                <dd>商家入住</dd>
+                <dd>商家后台</dd>
+                <dd>蘑菇商学院</dd>
+                <dd>商家社区</dd>
+            </dl>
+            <dl>
+                <dt>权威认证</dt>
+                <a href="#"><img src="{% static 'img/bank01.jpg' %}"></a>
+                <a href="#"><img src="{% static 'img/bank02.jpg' %}"></a>
+                <a href="#"><img src="{% static 'img/protect.jpg' %}"></a>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-con">
+        <ul>
+            <li>友情链接：</li>
+            <li><a href="#">美丽说</a></li>
+            <li><a href="#">蘑菇街游戏</a></li>
+            <li><a href="#">淘粉吧</a></li>
+            <li><a href="#">穿衣搭配</a></li>
+            <li><a href="#">秋季女装新款</a></li>
+            <li><a href="#">秋季连衣裙长袖</a></li>
+            <li><a href="#">秋季孕妇装</a></li>
+            <li><a href="#">QQ钱包</a></li>
+            <li><a href="#">时尚品牌网</a></li>
+            <li><a href="#">装修</a></li>
+            <li><a href="#">背带裤搭配</a></li>
+            <li><a href="#">衣联网</a></li>
+            <li><a href="#">乐视网视频</a></li>
+            <li><a href="#">慧聪网</a></li>
+            <li><a href="#">衬衫搭配</a></li>
+            <li><a href="#">牛仔外套搭配图片</a></li>
+            <li><a href="#">冬季时尚搭配</a></li>
+            <li><a href="#">针织衫搭配</a></li>
+            <li><a href="#">牛仔衣搭配</a></li>
+            <li><a href="#">风衣搭配</a></li>
+            <li><a href="#">补水面膜排行榜</a></li>
+        </ul>
+    </div>
+</div>
+<!--右边导航栏-->
+<div class="right_bar">
+    <div class="blank_div"></div>
+    <!--购物车-->
+    <div class="my_cart" style="left: 0px;">
+        <a href="#">
+            <div class="s-txt">购物车</div>
+        </a>
+    </div>
+    <!--优惠券-->
+    <div class="youhuiquan">
+        <a href="#">
+            <div class="s-txt">优惠券</div>
+        </a>
+    </div>
+    <!--钱包-->
+    <div class="qianbao">
+        <a href="#">
+            <div class="s-txt">钱包</div>
+        </a>
+    </div>
+    <!--足迹-->
+    <div class="zuji">
+        <a href="#">
+            <div class="s-txt">足迹</div>
+        </a>
+    </div>
+    <!--回到顶部-->
+    <div class="goTop">
+        <a href="#">
+            <div class="s-txt">Top</div>
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -231,7 +231,8 @@ $(function () {
 		var $that = $(this)
 
 		request_data = {
-			'productid':$('.goodmain').	attr('productid')
+			'productid':$('.goodmain').	attr('productid'),
+			'productnumber':$('.count input').val()
 		}
 		$.get(/addtocart/,request_data,function (response) {
 			console.log(response)
@@ -242,8 +243,8 @@ $(function () {
 
 				window.open('/login/','_self')
 
-			}else if(response.status == 1){
-
+			}else if (response.status == 1){
+				alert('成功添加')
 			}
 		})
 

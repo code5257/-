@@ -9,7 +9,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
-from mgj.models import Productdetail, Goods, User
+from mgj.models import Productdetail, Goods, User, Cart, Order, Orderproduct
 
 
 def mainPage(request):
@@ -106,7 +106,7 @@ def login(request):
 
                 #状态保持
                 token = generate_token()
-                cache.set(token, user.id,60*60*24*3)
+                cache.set(token, user.id,60*60*24*7)
                 request.session['token'] = token
 
                 #还可以为任何一个有登录的都不用a标签链接，用js点击事件都加back值
@@ -134,15 +134,28 @@ def logout(request):
 
     return response
 
+#购物车
 
 def shopping(request):
     res = {}
     token = request.session.get('token')
     userid = cache.get(token)
+    # print(userid)
+    if userid:
+        user = User.objects.get(pk=userid)
+        res['user'] = user
+        carts = user.cart_set.filter(productnumber__gt=0)
 
+        isall = True
+        for cart in carts:
+            if  not cart.isselect:
+                isall = False
+        res['isall'] = isall
+        res['carts'] = carts
 
-    return render(request,'shopping/shopping.html')
-
+        return render(request,'shopping/shopping.html',context=res)
+    else:
+        return redirect('mgj:login')
 
 def checkname(request):
     username = request.GET.get('username')
@@ -164,12 +177,31 @@ def checkname(request):
 
 
 def addtocart(request):
-    print(request.GET.get('productid'))
+    # print(request.GET.get('productid'))
     res = {}
     token = request.session.get('token')
     if token:
         userid = cache.get(token)
         if userid:
+            user = User.objects.get(pk=userid)
+            productid = request.GET.get('productid')
+            productnumber = request.GET.get(('productnumber'))
+            # print(productid,productnumber)
+            product = Productdetail.objects.get(pk=productid)
+
+            carts = Cart.objects.filter(user=user).filter(productdetail=product)
+            #判断购物车里是否存在这件商品
+            if carts.exists():
+                cart = carts.first()
+                cart.productnumber += productnumber
+                cart.save()
+            else:
+                cart = Cart()
+                cart.user = user
+                cart.productdetail = product
+                cart.productnumber = productnumber
+                cart.save()
+
             res['status'] = 1
             res['msg'] = '已经登录'
             return JsonResponse(res)
@@ -178,3 +210,109 @@ def addtocart(request):
     res['msg'] = '还未登录'
 
     return JsonResponse(res)
+
+
+def changeselect(request):
+    cartid = request.GET.get('cartid')
+    # print('收到服务端数据',cartid)
+    cart = Cart.objects.get(pk = cartid)
+    cart.isselect = not cart.isselect
+    cart.save()
+
+    res = {'sttus':1,
+           'msg':'选中状态已改变',
+           'isselect':cart.isselect,
+           }
+
+
+    return JsonResponse(res)
+
+
+def allselect(request):
+    res={}
+    isall = request.GET.get('isall')
+    token = request.session.get('token')
+    userid = cache.get(token)
+    user = User.objects.get(pk=userid)
+    carts = user.cart_set.all()
+    if isall=='true':
+        isall = True
+    elif isall == 'false':
+        isall = False
+
+    for cart in carts:
+        cart.isselect = isall
+        cart.save()
+    res['status'] = 1
+    res['msg'] = '全选状态已改变'
+
+    return JsonResponse(res)
+
+#生成订单号的方法
+def generate_orderid():
+    temp = str( int(time.time())) + str(random.randrange(1000,10000))
+    return temp
+
+def generateorder(request):
+    #首先获取用户身份
+    token = request.session.get('token')
+    userid = cache.get(token)
+    print(userid)
+    user = User.objects.get(pk=userid)
+
+    # 获取用户对应购物车中被选中下单的商品
+    carts = user.cart_set.filter(isselect=True)
+    if carts.exists():
+        #生成订单
+        order = Order()
+        order.user = user
+        order.orderid = generate_orderid()
+        print(order.orderid)
+        order.save()
+
+
+        for cart in carts:
+            orderproduct = Orderproduct()
+            orderproduct.order = order
+            orderproduct.products = cart.productdetail
+            orderproduct.number = cart.productnumber
+            orderproduct.save()
+            # 购物车中移除
+            cart.delete()
+    orders = user.order_set.all()
+    sum = 0
+    for order in orders:
+        for orderGoods in  order.orderproduct_set.all():
+            sum += orderGoods.products.price * orderGoods.number
+
+    res = {
+        'orders':orders,
+        'sum':sum
+        }
+
+
+    return render(request,'order/orderdetail.html',context=res)
+
+
+def orderlist(request):
+    # 首先获取用户身份
+    token = request.session.get('token')
+    userid = cache.get(token)
+    user = User.objects.get(pk=userid)
+
+    orders = user.order_set.all()
+    sum = 0
+    for order in orders:
+        for orderGoods in order.orderproduct_set.all():
+            sum += orderGoods.products.price * orderGoods.number
+    res = {
+        'orders': orders,
+        'sum': sum
+    }
+
+    return render(request, 'order/orderdetail.html', context=res)
+
+
+# def orderdetail(request):
+#
+#     return render(request,'order/orderdetail.html')

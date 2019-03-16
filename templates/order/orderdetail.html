@@ -1,0 +1,47 @@
+{% extends 'shopping/shopping.html' %}
+
+{% block title %}
+    订单详情
+{% endblock %}
+
+{% block order %}
+    <table class="cartlist" border="1px">
+        <thead>
+        <tr>
+            <th>订单号</th>
+            <th>下单时间</th>
+            <th>商品</th>
+            <th>￥金额</th>
+            <th>订单状态</th>
+            <th>操作</th>
+        </tr>
+
+        {% for order in orders %}
+            <tr>
+                <th>{{ order.orderid }}</th>
+                <th>{{ order.createtime }}</th>
+                <th>{% for orderproduct in order.orderproduct_set.all %}
+                    <span>{{ orderproduct.products.type }}</span>×<i>{{ orderproduct.number }}</i>
+                {% endfor %}
+                </th>
+                <th >{{ sum }}</th>
+                <th> {% if order.status == 0 %}
+                    未付款
+                {% elif order.status == 1 %}
+                    待发货
+                {% elif order.status == 2 %}
+                    待收货
+                {% elif order.status == 3 %}
+                    待评价
+                {% elif order.status == 4 %}
+                    已评价
+                {% endif %}</th>
+                <th>
+                    <button>支付</button>
+                </th>
+            </tr>
+        {% endfor %}
+
+        </thead>
+    </table>
+{% endblock %}

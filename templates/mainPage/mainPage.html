@@ -61,11 +61,11 @@
 
             <li class="myorder">
                 <img src="{% static 'img/top_nav2.jpg' %}" alt="">
-                <a href="#">我的订单&nbsp;|</a>
+                <a href={% url 'mgj:orderlist' %}>我的订单&nbsp;|</a>
             </li>
             <li class="shoppingcar">
                 <img src="{% static 'img/top_car.jpg' %}" alt="" style="width:14px; height: 14px;">
-                <a href="#">购物车&nbsp;|</a>
+                <a href={% url 'mgj:shopping' %}>购物车&nbsp;|</a>
                 <div class="empty_cart">购物车里没有商品</div>
             </li>
             <li class="customer_service">

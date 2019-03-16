@@ -48,8 +48,8 @@ class Order(models.Model):
     status = models.IntegerField(default=0)
     #订单号
     orderid = models.CharField(max_length=256)
-    # #订单金额
-    # ordermoney = models.IntegerField()
+    #订单金额
+    ordermoney = models.FloatField(default=0)
 
 #对应订单(order)和商品(productdetail)
 class Orderproduct(models.Model):

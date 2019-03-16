@@ -24,7 +24,7 @@
                     <span>{{ orderproduct.products.type }}</span>×<i>{{ orderproduct.number }}</i>
                 {% endfor %}
                 </th>
-                <th >{{ sum }}</th>
+                <th >{{ order.ordermoney }}</th>
                 <th> {% if order.status == 0 %}
                     未付款
                 {% elif order.status == 1 %}

@@ -258,60 +258,70 @@ def generateorder(request):
     token = request.session.get('token')
     userid = cache.get(token)
     print(userid)
-    user = User.objects.get(pk=userid)
 
+    user = User.objects.get(pk=userid)
     # 获取用户对应购物车中被选中下单的商品
     carts = user.cart_set.filter(isselect=True)
-    if carts.exists():
-        #生成订单
-        order = Order()
-        order.user = user
-        order.orderid = generate_orderid()
-        print(order.orderid)
-        order.save()
+
+    #生成订单
+    order = Order()
+    order.user = user
+    order.orderid = generate_orderid()
+    # print(order.orderid)
+    order.save()
 
 
-        for cart in carts:
-            orderproduct = Orderproduct()
-            orderproduct.order = order
-            orderproduct.products = cart.productdetail
-            orderproduct.number = cart.productnumber
-            orderproduct.save()
-            # 购物车中移除
-            cart.delete()
+    for cart in carts:
+        orderproduct = Orderproduct()
+        orderproduct.order = order
+        orderproduct.products = cart.productdetail
+        orderproduct.number = cart.productnumber
+        orderproduct.save()
+        # 购物车中移除
+        cart.delete()
     orders = user.order_set.all()
     sum = 0
     for order in orders:
         for orderGoods in  order.orderproduct_set.all():
             sum += orderGoods.products.price * orderGoods.number
 
+        order.ordermoney = sum
+        order.save()
+        sum = 0
+
     res = {
         'orders':orders,
-        'sum':sum
+        # 'sum':sum
         }
-
 
     return render(request,'order/orderdetail.html',context=res)
 
 
+#我的订单
 def orderlist(request):
     # 首先获取用户身份
     token = request.session.get('token')
     userid = cache.get(token)
-    user = User.objects.get(pk=userid)
+    if userid:
+        user = User.objects.get(pk=userid)
 
-    orders = user.order_set.all()
-    sum = 0
-    for order in orders:
-        for orderGoods in order.orderproduct_set.all():
-            sum += orderGoods.products.price * orderGoods.number
-    res = {
-        'orders': orders,
-        'sum': sum
-    }
+        orders = user.order_set.all()
+        sum = 0
+        for order in orders:
+            for orderGoods in order.orderproduct_set.all():
+                sum += orderGoods.products.price * orderGoods.number
+            order.ordermoney = sum
+            print(sum)
+            order.save()
+            sum = 0
 
-    return render(request, 'order/orderdetail.html', context=res)
+        res = {
+            'orders': orders,
+            # 'sum': sum
+        }
 
+        return render(request, 'order/orderdetail.html', context=res)
+    return redirect('mgj:login')
 
 # def orderdetail(request):
 #

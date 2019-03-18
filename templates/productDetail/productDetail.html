@@ -67,7 +67,7 @@
             {% endif %}
             <li class="myorder">
                 <img src="{% static 'img/top_nav2.jpg' %}" alt="">
-                <a href="#">我的订单&nbsp;|</a>
+                <a href={% url 'mgj:orderlist' %}>我的订单&nbsp;|</a>
             </li>
             <li class="shoppingcar">
                 <img src="{% static 'img/top_car.jpg' %}" alt="" style="width:14px; height: 14px;">

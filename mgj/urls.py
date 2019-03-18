@@ -22,4 +22,10 @@ urlpatterns = [
     url(r'^generateorder/$',views.generateorder,name='generateorder'),
     url(r'^orderlist/$',views.orderlist,name='orderlist'),#订单列表
     # url(r'^orderdetail/$',views.orderdetail,name='orderdetail'),#订单详情
+
+    # url(r'^randomtest/$', views.randomtest, name='randomtest'),  # 测试接口
+
+    url(r'^returnurl/$', views.returnurl, name='returnurl'),  # 支付成功后，客户端的显示
+    url(r'^appnotifyurl/$', views.appnotifyurl, name='appnotifyurl'),  # 支付成功后，订单的处理
+    url(r'^pay/$',views.pay,name='pay'),
 ]

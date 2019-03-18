@@ -1,7 +1,11 @@
 {% extends 'shopping/shopping.html' %}
+{% load static %}
 
 {% block title %}
     订单详情
+{% endblock %}
+{% block addjs %}
+<script type="text/javascript" src={% static "order/js/orderdetail.js" %}></script>
 {% endblock %}
 
 {% block order %}
@@ -37,7 +41,7 @@
                     已评价
                 {% endif %}</th>
                 <th>
-                    <button>支付</button>
+                    <button class="alipay" orderId ={{ order.id }}>支付</button>
                 </th>
             </tr>
         {% endfor %}

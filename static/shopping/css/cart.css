@@ -335,3 +335,50 @@ a{
 	width:50px;
 	background: url(../../img/cartfooter.png) -486px -50px no-repeat;
 }
+.count{
+	width:100%;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.count span{
+	color: #999;
+	line-height:30px;
+	float: left;
+}
+.minus{
+	float: left;
+	border: 1px solid #cfcfcf;
+	width:24px;
+	height: 25px;
+	display: inline-block;
+	cursor: pointer;
+	opacity: 3;
+	background-image: url(../../detailsImg/minus.png);
+	background-repeat: no-repeat;
+	background-position: -3px 2px;
+	background-repeat: no-repeat;
+	margin-left: 20px;
+}
+.countnum{
+	width:44px;
+	text-align: center;
+	color: #000;
+	font-size: 14px;
+	height: 25px;
+	border: 1px solid #ddd;
+	float: left;
+	background: none;
+}
+.plus{
+	float: right;
+	width:24px;
+	height: 25px;
+	display: inline-block;
+	cursor: pointer;
+	background-image: url(../../detailsImg/plus.png);
+	background-repeat: no-repeat;
+	background-position: -3px -78px;
+	border: 1px solid #cfcfcf;
+}

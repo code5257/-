@@ -15,6 +15,9 @@
     <link href={% static "shopping/css/cart.css" %} rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src={% static "shopping/js/jquery.cookie.js" %}></script>
     <script type="text/javascript" src={% static "shopping/js/cart.js" %}></script>
+    {% block addjs %}
+
+    {% endblock %}
 </head>
 <body>
 <div class="header">
@@ -110,7 +113,7 @@
                 <th class="tablegood">商品</th>
                 <th class="goodsinfo">商品信息</th>
                 <th>单价（元）</th>
-                <th class="goodnum">数量</th>
+                <th class="goodnum">&nbsp;&nbsp;&nbsp;数量</th>
                 <th class="goodssum">小计</th>
                 <th class="goodsctrl">操作</th>
             </tr>
@@ -129,8 +132,17 @@
                 </th>
                 <th class="tablegood">{{ cart.productdetail.type }}</th>
                 <th class="goodsinfo">{{ cart.productdetail.name }}</th>
+
+{#                <div class="count">#}
+{#                    <span>数量：</span>#}
+{#                    <span class="minus"></span>#}
+{#                    <input type="text" value="1" class="countnum">#}
+{#                    <span class="plus"></span>#}
+{#                    <span class="store">库存<b class="storenum">{{ product.store }}</b>件</span>#}
+{#                </div>#}
+
                 <th class="goodprice" goodprice={{ cart.productdetail.price }}>单价{{ cart.productdetail.price }} （元）</th>
-                <th class="goodnum" productnumber={{ cart.productnumber }}>数量:{{ cart.productnumber }}</th>
+                <th class="goodnum" productnumber={{ cart.productnumber }}><span class="minus"></span>{{ cart.productnumber }}<span class="plus"></span></th>
                 <th class="goodssum">{{ cart.productdetail.price }}×{{ cart.productnumber }}</th>
                 <th class="goodsctrl">待下单</th>
             </tr>

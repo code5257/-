@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href={% static "login/css/login.css" %}/>
+    <link rel="stylesheet" href={% static "login/css/login.css" %}>
     <script type="text/javascript" src={% static "login/js/jquery-1.12.3.js" %}></script>
     <script type="text/javascript" src={% static "login/js/jquery.cookie.js" %}></script>
     <script type="text/javascript" src={% static "login/js/login.js" %}></script>
@@ -36,6 +36,7 @@
             <!--正常登录-->
             <div class="login_form">
                 <form action="#" method="post">
+                    {% csrf_token %}
                     {% if eero1 %}
                         <p class="erro_info">此用户不存在</p>
                     {% endif %}

@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebe280f-fa88-4d98-8f1f-c9cd105e1e51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/order/grtorder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dir/django_mgj.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dir/django_mgj.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgj/alipay/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/alipay/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgj/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgj/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reqirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reqirement.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/order/js/orderdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/order/js/orderdetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/productDetail/css/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/productDetail/css/details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/productDetail/js/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/productDetail/js/details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/shopping/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/shopping/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/shopping/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/shopping/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/mainPage/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainPage/mainPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/order/orderdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order/orderdetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/productDetail/productDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productDetail/productDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shopping/shopping.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shopping/shopping.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,14 +49,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.60638297">
+    <splitter split-orientation="horizontal" split-proportion="0.74640423">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mgj/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+                <state relative-caret-position="552">
+                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -81,8 +67,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mgj/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+                <state relative-caret-position="493">
+                  <caret line="360" column="19" lean-forward="true" selection-start-line="360" selection-start-column="19" selection-end-line="360" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -91,29 +77,28 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/productDetail/productDetail.html">
+            <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="310">
-                  <caret line="361" column="44" selection-start-line="361" selection-start-column="44" selection-end-line="361" selection-end-column="44" />
-                  <folding>
-                    <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#a#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#a#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                  </folding>
+                <state relative-caret-position="202">
+                  <caret line="125" column="47" lean-forward="true" selection-start-line="125" selection-start-column="47" selection-end-line="125" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
+            <entry file="file://$PROJECT_DIR$/templates/productDetail/productDetail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="444" column="13" selection-start-line="444" selection-start-column="13" selection-end-line="444" selection-end-column="13" />
+                <state relative-caret-position="2275">
+                  <caret line="342" column="34" lean-forward="true" selection-start-line="342" selection-start-column="34" selection-end-line="342" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/order/orderdetail.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="494">
+                  <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -122,11 +107,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mgj/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1248">
-                  <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+                <state relative-caret-position="301">
+                  <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -159,16 +144,7 @@
             <entry file="file://$PROJECT_DIR$/templates/order/grtorder.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="24">
-                  <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static/productDetail/css/details.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="729" column="23" selection-start-line="729" selection-start-column="23" selection-end-line="729" selection-end-column="23" />
+                  <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -198,6 +174,9 @@
       <find>print</find>
       <find>minus</find>
       <find>nav-con</find>
+      <find>buy</find>
+      <find>立</find>
+      <find>快抢</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,25 +207,25 @@
         <option value="$PROJECT_DIR$/mgj/alipay/__init__.py" />
         <option value="$PROJECT_DIR$/templates/shopping/shopping.html" />
         <option value="$PROJECT_DIR$/dir/test.py" />
-        <option value="$PROJECT_DIR$/mgj/models.py" />
         <option value="$PROJECT_DIR$/dir/text.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/static/shopping/js/cart.js" />
-        <option value="$PROJECT_DIR$/mgj/urls.py" />
-        <option value="$PROJECT_DIR$/mgj/views.py" />
         <option value="$PROJECT_DIR$/templates/order/grtorder.html" />
         <option value="$PROJECT_DIR$/static/productDetail/js/details.js" />
-        <option value="$PROJECT_DIR$/templates/mainPage/mainPage.html" />
         <option value="$PROJECT_DIR$/static/productDetail/css/details.css" />
+        <option value="$PROJECT_DIR$/mgj/urls.py" />
         <option value="$PROJECT_DIR$/templates/productDetail/productDetail.html" />
+        <option value="$PROJECT_DIR$/mgj/models.py" />
+        <option value="$PROJECT_DIR$/mgj/views.py" />
+        <option value="$PROJECT_DIR$/templates/mainPage/mainPage.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="x" value="329" />
+    <option name="y" value="53" />
     <option name="width" value="1375" />
-    <option name="height" value="876" />
+    <option name="height" value="904" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -315,6 +294,12 @@
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="productDetail" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -440,18 +425,18 @@
       <updated>1552552114241</updated>
       <workItem from="1552552120394" duration="91882000" />
       <workItem from="1552797073565" duration="41053000" />
-      <workItem from="1552957490931" duration="12146000" />
+      <workItem from="1552957490931" duration="18632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145081000" />
+    <option name="totallyTimeSpent" value="151567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116639026" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12990603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -465,7 +450,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17659353" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24764891" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="File Transfer" order="14" weight="0.8684211" />
@@ -473,7 +458,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Database" order="4" weight="0.13985628" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13985628" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -681,31 +666,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dir/test.py" />
-    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_cart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dir/text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/order/orderdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgj/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -740,46 +704,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_order">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/order/grtorder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/productDetail/js/details.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgj/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,34 +721,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
+    <entry file="file://$PROJECT_DIR$/static/productDetail/css/details.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="444" column="13" selection-start-line="444" selection-start-column="13" selection-end-line="444" selection-end-column="13" />
+        <state relative-caret-position="379">
+          <caret line="729" column="23" selection-start-line="729" selection-start-column="23" selection-end-line="729" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/productDetail/css/details.css">
+    <entry file="file://$PROJECT_DIR$/templates/order/grtorder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="729" column="23" selection-start-line="729" selection-start-column="23" selection-end-line="729" selection-end-column="23" />
+        <state relative-caret-position="24">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgj/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_cart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/order/orderdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgj/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_order">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgj/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="360" column="19" lean-forward="true" selection-start-line="360" selection-start-column="19" selection-end-line="360" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/productDetail/productDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="361" column="44" selection-start-line="361" selection-start-column="44" selection-end-line="361" selection-end-column="44" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#a#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#a#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="2275">
+          <caret line="342" column="34" lean-forward="true" selection-start-line="342" selection-start-column="34" selection-end-line="342" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="125" column="47" lean-forward="true" selection-start-line="125" selection-start-column="47" selection-end-line="125" selection-end-column="47" />
         </state>
       </provider>
     </entry>

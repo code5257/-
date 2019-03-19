@@ -51,7 +51,7 @@ class Order(models.Model):
     #订单号
     orderid = models.CharField(max_length=256)
     #订单金额
-    ordermoney = models.DecimalField(max_digits=6,decimal_places=2)
+    ordermoney = models.DecimalField(max_digits=6,decimal_places=2,default=0)
 
 #对应订单(order)和商品(productdetail)
 class Orderproduct(models.Model):

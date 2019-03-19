@@ -23,7 +23,7 @@ urlpatterns = [
     #下单到订单详情以及订单列表
     url(r'^generateorder/$',views.generateorder,name='generateorder'),
     #立即购买，直接下单，需要传商品id确认是哪件商品
-    # url(r'^grtorder/(\d+)/$',views.grtorder,name='grtorder'),
+    url(r'^grtorder/(\d+)/$',views.grtorder,name='grtorder'),
 
     url(r'^orderlist/$',views.orderlist,name='orderlist'),#订单列表
     # url(r'^orderdetail/$',views.orderdetail,name='orderdetail'),#订单详情

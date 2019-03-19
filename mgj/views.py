@@ -277,7 +277,7 @@ def generateorder(request):
     #首先获取用户身份
     token = request.session.get('token')
     userid = cache.get(token)
-    # print(userid)
+    # (userid)
 
     user = User.objects.get(pk=userid)
     # 获取用户对应购物车中被选中下单的商品
@@ -304,7 +304,7 @@ def generateorder(request):
     for order in orders:
         for orderGoods in  order.orderproduct_set.all():
             sum += orderGoods.products.price * orderGoods.number
-        print(sum)
+        # print(sum)
         order.ordermoney = sum
         order.save()
         sum = 0
@@ -316,10 +316,51 @@ def generateorder(request):
 
     return render(request,'order/orderdetail.html',context=res)
 
-#直接购买，直接下单，跳过加购物车下单步骤
-# def grtorder(request,productid):
-#
-#     return None
+# 直接购买，直接下单，跳过加购物车下单步骤
+def grtorder(request,productid):
+    # 首先获取用户身份
+    token = request.session.get('token')
+    userid = cache.get(token)
+    # print(userid)
+    user = User.objects.get(pk=userid)
+    # 生成订单
+    order = Order()
+    order.user = user
+    order.orderid = generate_orderid()
+    # print(order.orderid)
+    order.save()
+
+    orderproduct = Orderproduct()
+    orderproduct.order = order
+    # print(Productdetail.objects.get(pk=productid))
+    orderproduct.products =Productdetail.objects.get(pk=productid)
+    orderproduct.number = 1
+    orderproduct.save()
+
+
+
+    orders = user.order_set.all()
+    sum = 0
+    for order in orders:
+        for orderGoods in  order.orderproduct_set.all():
+            sum += orderGoods.products.price * orderGoods.number
+        # print(sum)
+        orderid = order.id
+        # print(sum)
+        # print(orderid)
+        # orders.filter(orderid=orderid).update(ordermoney=sum)
+        order = Order.objects.get(pk=orderid)
+        order.ordermoney =  sum
+
+        # print(order)
+        order.save()
+        sum = 0
+    orders1 = user.order_set.all()
+    res = {
+        'orders': orders1,
+        # 'sum':sum
+    }
+    return render(request,'order/orderdetail.html',context=res)
 
 
 

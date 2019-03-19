@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="tx1">
+  <component name="PublishConfigData">
     <serverData>
+      <paths name="aliyun_zhy">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/mgj" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="tx1">
         <serverdata>
           <mappings>

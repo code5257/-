@@ -194,13 +194,15 @@ def addtocart(request):
             #判断购物车里是否存在这件商品
             if carts.exists():
                 cart = carts.first()
-                cart.productnumber += productnumber
+                cart.productnumber += int(productnumber)
+                cart.cartmoney = cart.productnumber*cart.productdetail.price
                 cart.save()
             else:
                 cart = Cart()
                 cart.user = user
                 cart.productdetail = product
-                cart.productnumber = productnumber
+                cart.productnumber = int(productnumber)
+                cart.cartmoney = cart.productnumber*cart.productdetail.price
                 cart.save()
 
             res['status'] = 1
@@ -209,6 +211,23 @@ def addtocart(request):
 
     res['status'] = 0
     res['msg'] = '还未登录'
+
+    return JsonResponse(res)
+
+
+def removecart(request):
+    cartid = request.GET.get('cartid')
+    token = request.session.get('token')
+    userid = cache.get(token)
+    user = User.objects.get(pk=userid)
+    # print(cartid)
+    cart = user.cart_set.get(pk=cartid)
+    cart.delete()
+
+    res={
+        'status':1,
+        'smg':'成功移除此商品',
+    }
 
     return JsonResponse(res)
 
@@ -258,7 +277,7 @@ def generateorder(request):
     #首先获取用户身份
     token = request.session.get('token')
     userid = cache.get(token)
-    print(userid)
+    # print(userid)
 
     user = User.objects.get(pk=userid)
     # 获取用户对应购物车中被选中下单的商品
@@ -285,7 +304,7 @@ def generateorder(request):
     for order in orders:
         for orderGoods in  order.orderproduct_set.all():
             sum += orderGoods.products.price * orderGoods.number
-
+        print(sum)
         order.ordermoney = sum
         order.save()
         sum = 0
@@ -296,6 +315,14 @@ def generateorder(request):
         }
 
     return render(request,'order/orderdetail.html',context=res)
+
+#直接购买，直接下单，跳过加购物车下单步骤
+# def grtorder(request,productid):
+#
+#     return None
+
+
+
 
 
 #我的订单
@@ -312,7 +339,7 @@ def orderlist(request):
             for orderGoods in order.orderproduct_set.all():
                 sum += orderGoods.products.price * orderGoods.number
             order.ordermoney = sum
-            print(sum)
+            # print(sum)
             order.save()
             sum = 0
 
@@ -377,7 +404,7 @@ def pay(request):
         subject='MackBookPro [256G 8G 灰色]',  # 显示标题
         out_trade_no=order.orderid,  # 爱鲜蜂 订单号
         total_amount=str(sum),  # 支付金额
-        return_url='http://129.28.51.21/returnurl/'
+        return_url='http://39.96.66.69/returnurl/'
     )
 
     # 支付地址
@@ -390,5 +417,4 @@ def pay(request):
     }
 
     return JsonResponse(response_data)
-
 

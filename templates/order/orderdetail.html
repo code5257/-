@@ -29,7 +29,7 @@
                 {% endfor %}
                 </th>
                 <th >{{ order.ordermoney }}</th>
-                <th> {% if order.status == 0 %}
+                <th class="status" status={{ order.status }}> {% if order.status == 0 %}
                     未付款
                 {% elif order.status == 1 %}
                     待发货

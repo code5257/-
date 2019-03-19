@@ -14,12 +14,17 @@ urlpatterns = [
 
     url(r'^shopping/$',views.shopping,name='shopping'),
     url(r'^addtocart/$',views.addtocart,name='addtocart'),#ajax请求添加购物车
+    url(r'^removecart/$',views.removecart,name='removecart'),#ajax清空购物车里某件商品
+
     #ajax请求来控制选择和数据库中的选中状态的同步
     url(r'^changeselect/$',views.changeselect,name='changeselect'),
     url(r'^allselect/$',views.allselect,name='allselect'),
 
     #下单到订单详情以及订单列表
     url(r'^generateorder/$',views.generateorder,name='generateorder'),
+    #立即购买，直接下单，需要传商品id确认是哪件商品
+    # url(r'^grtorder/(\d+)/$',views.grtorder,name='grtorder'),
+
     url(r'^orderlist/$',views.orderlist,name='orderlist'),#订单列表
     # url(r'^orderdetail/$',views.orderdetail,name='orderdetail'),#订单详情
 

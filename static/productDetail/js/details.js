@@ -184,6 +184,47 @@
 // })
 
 $(function () {
+		//显示隐藏
+	$(".shoppingcar").mouseenter(function(){
+		$(".empty_cart").show();
+	})
+	$(".shoppingcar").mouseleave(function(){
+		$(".empty_cart").hide();
+	})
+	$(".customer_service").mouseenter(function(){
+		$(".service_none").show();
+	})
+	$(".customer_service").mouseleave(function(){
+		$(".service_none").hide();
+	})
+	$(".xiaodian").mouseover(function(){
+		$(".myxiaodian").show();
+	})
+	$(".xiaodian").mouseout(function(){
+		$(".myxiaodian").hide();
+	})
+	$(".user-info").mouseenter(function(){
+		$(".shop_info").show();
+		$(".shop_info").mouseenter(function(){
+			$(".shop_info").show();
+		})
+	})
+	$(".user-info").mouseleave(function(){
+		$(".shop_info").hide();
+	})
+	$(".nav-list .all").mouseenter(function(){
+		$(".sec_list").show();
+		$(".sec_list").mouseenter(function(){
+			$(".sec_list").show();
+		})
+		$(".sec_list").mouseleave(function(){
+			$(".sec_list").hide();
+		})
+	})
+	$(".nav-list .all").mouseleave(function(){
+		$(".sec_list").hide();
+	})
+
 	// $('img').each(function () {
 	// 	var path = $(this).attr('src')
 	//
@@ -206,6 +247,18 @@ $(function () {
 	})
     // 	//商品加减
 	$(".minus").click(function(){
+		// console.log(typeof ($(this).next().val()))
+		// var inputnum_m = parseInt($(this).next().val()) - 1
+		// // console.log(inputnum)
+		// // console.log($('.store b').text())
+		// var storenum_m = parseInt($('.store b').text())
+		// if(inputnum_m>storenum_m){
+		// 	$('.count .countnum').popover('show');
+		// }else {
+		// 	$('.count .countnum').popover('hide');
+		// }
+		$('.count .countnum').popover('hide');
+
 		var n = $(".countnum").val();
 		if(n <= 1){
 			return;
@@ -214,12 +267,24 @@ $(function () {
 		$(".countnum").val(num);
 	})
 	$(".plus").click(function(){
+		// console.log($(this).prev().val())
+		// console.log($('.store b').text())
+		// var inputnum_p = parseInt($(this).prev().val())
+		// var storenum_p = parseInt($('.store b').text())
+		// console.log(inputnum_p,storenum_p)
+		// if(inputnum_p>storenum_p){
+		// 	$('.count .countnum').popover('show');
+		// }else {
+		// 	$('.count .countnum').popover('hide');
+		// }
+
 		var n = $(".countnum").val();
 		var i = $(".storenum").html();
 		var stonum = parseInt(i);
 		var num = parseInt(n)+1;
 		if(num >= stonum){
-			alert("所选商品数量大于库存数量");
+			// alert("所选商品数量大于库存数量");
+			$('.count .countnum').popover('show');
 			num = stonum;
 		};
 		$(".countnum").val(num);
@@ -250,6 +315,17 @@ $(function () {
 
 	})
 
+	//为数量改变添加一个事件用来判断购买的东西，库存是否足够
+    $('.count input').on('input propertychange',function(){
+		// console.log($('.store b').text())
+		var storenum_on = parseInt($('.store b').text())
+    	if($(this).val()>storenum_on){
+    		// console.log(1);
+    		$('.count .countnum').popover('show');
+    	}else{
+    		$('.count .countnum').popover('hide');
+    	}
+    })
 
 
 })

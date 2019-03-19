@@ -335,18 +335,18 @@ a{
 	width:50px;
 	background: url(../../img/cartfooter.png) -486px -50px no-repeat;
 }
-.count{
-	width:100%;
-	height: 30px;
-	margin-top: 20px;
-	margin-left: 10px;
-}
+/*.count{*/
+	/*width:100%;*/
+	/*height: 30px;*/
+	/*margin-top: 20px;*/
+	/*margin-left: 10px;*/
+/*}*/
 
-.count span{
-	color: #999;
-	line-height:30px;
-	float: left;
-}
+/*.count span{*/
+	/*color: #999;*/
+	/*line-height:30px;*/
+	/*float: left;*/
+/*}*/
 .minus{
 	float: left;
 	border: 1px solid #cfcfcf;
@@ -361,21 +361,22 @@ a{
 	background-repeat: no-repeat;
 	margin-left: 20px;
 }
-.countnum{
-	width:44px;
-	text-align: center;
-	color: #000;
-	font-size: 14px;
-	height: 25px;
-	border: 1px solid #ddd;
-	float: left;
-	background: none;
-}
+/*.countnum{*/
+	/*width:44px;*/
+	/*text-align: center;*/
+	/*color: #000;*/
+	/*font-size: 14px;*/
+	/*height: 25px;*/
+	/*border: 1px solid #ddd;*/
+	/*float: left;*/
+	/*background: none;*/
+/*}*/
 .plus{
 	float: right;
 	width:24px;
 	height: 25px;
 	display: inline-block;
+	/*display: none;*/
 	cursor: pointer;
 	background-image: url(../../detailsImg/plus.png);
 	background-repeat: no-repeat;

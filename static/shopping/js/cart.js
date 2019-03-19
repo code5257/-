@@ -224,5 +224,30 @@ $(function () {
         $('.cartEmpty b').html('￥金额：'+sum)
     }
 
+    // $('#subbutton').click(function () {
+    //     console.log('隐藏')
+    //     $(this).hide()
+    // })
+    // $('#addbutton').click(function () {
+    //     console.log('显示')
+    //     $('#subbutton').show()
+    // })
+
+    $('.removebutton').click(function () {
+        console.log('移除')
+        request_data ={
+            cartid:$(this).attr('cartid')
+        }
+        var $that = $(this)
+
+        $.get('/removecart/',request_data,function (response) {
+            if(response.status==1){
+                $that.parent().parent().remove()
+                console.log(response)
+                money()
+            }
+        })
+
+    })
 
 })

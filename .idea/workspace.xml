@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebe280f-fa88-4d98-8f1f-c9cd105e1e51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mgj/alipay/ALIPAY_PUBLIC_KEY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mgj/alipay/APP_PRIVATE_KEY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mgj/alipay/APP_PUBLIC_KEY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mgj/alipay/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/order/js/orderdetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/order/grtorder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django_mgj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_mgj/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dir/django_mgj.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dir/django_mgj.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgj/alipay/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/alipay/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgj/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgj/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mgj/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/login/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reqirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reqirement.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/order/js/orderdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/order/js/orderdetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/productDetail/css/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/productDetail/css/details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/productDetail/js/details.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/productDetail/js/details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/shopping/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/shopping/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/shopping/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/shopping/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mainPage/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mainPage/mainPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/order/orderdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order/orderdetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/productDetail/productDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productDetail/productDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shopping/shopping.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shopping/shopping.html" afterDir="false" />
@@ -25,6 +27,10 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Django_mgj$text.coverage" NAME="text Coverage Results" MODIFIED="1552903262222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dir" />
+    <SUITE FILE_PATH="coverage/Django_mgj$test.coverage" NAME="test Coverage Results" MODIFIED="1552901851243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dir" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -57,14 +63,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.83320284">
+    <splitter split-orientation="horizontal" split-proportion="0.60638297">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mgj/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="526">
-                  <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+                <state relative-caret-position="96">
+                  <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -75,23 +81,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mgj/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="379" column="48" selection-start-line="379" selection-start-column="48" selection-end-line="379" selection-end-column="48" />
+                <state relative-caret-position="239">
+                  <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mgj/alipay/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="413">
-                  <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                    <element signature="e#612#1278#0" />
                   </folding>
                 </state>
               </provider>
@@ -100,35 +93,27 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/productDetail/productDetail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="343">
-                  <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+                <state relative-caret-position="310">
+                  <caret line="361" column="44" selection-start-line="361" selection-start-column="44" selection-end-line="361" selection-end-column="44" />
+                  <folding>
+                    <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#a#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#a#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/order/orderdetail.html">
+            <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/shopping/shopping.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-192">
-                  <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/login/login.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="163">
-                  <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+                <state relative-caret-position="216">
+                  <caret line="444" column="13" selection-start-line="444" selection-start-column="13" selection-end-line="444" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -140,17 +125,50 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mgj/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+                <state relative-caret-position="1248">
+                  <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/shopping/js/cart.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="536">
+                  <caret line="251" selection-start-line="251" selection-end-line="251" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/productDetail/js/details.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="312">
+                  <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/order/grtorder.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="24">
+                  <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static/order/js/orderdetail.js">
+            <entry file="file://$PROJECT_DIR$/static/productDetail/css/details.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+                <state relative-caret-position="320">
+                  <caret line="729" column="23" selection-start-line="729" selection-start-column="23" selection-end-line="729" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -163,6 +181,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -177,6 +196,8 @@
       <find>btn</find>
       <find>cartE</find>
       <find>print</find>
+      <find>minus</find>
+      <find>nav-con</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,38 +211,42 @@
         <option value="$PROJECT_DIR$/static/mainPage/css/mainPage.css" />
         <option value="$PROJECT_DIR$/static/mainPage/js/mainPage.js" />
         <option value="$PROJECT_DIR$/Django_mgj/__init__.py" />
-        <option value="$PROJECT_DIR$/static/productDetail/css/details.css" />
         <option value="$PROJECT_DIR$/static/login/js/login.js" />
         <option value="$PROJECT_DIR$/static/register/css/register.css" />
         <option value="$PROJECT_DIR$/static/register/js/register.js" />
         <option value="$PROJECT_DIR$/templates/register/register.html" />
-        <option value="$PROJECT_DIR$/static/productDetail/js/details.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/static/shopping/js/cart.js" />
-        <option value="$PROJECT_DIR$/templates/mainPage/mainPage.html" />
-        <option value="$PROJECT_DIR$/mgj/models.py" />
         <option value="$PROJECT_DIR$/Django_mgj/settings.py" />
         <option value="$PROJECT_DIR$/static/login/css/login.css" />
         <option value="$PROJECT_DIR$/templates/login/login.html" />
-        <option value="$PROJECT_DIR$/static/shopping/css/cart.css" />
         <option value="$PROJECT_DIR$/mgj/alipay/APP_PUBLIC_KEY.txt" />
         <option value="$PROJECT_DIR$/mgj/alipay/APP_PRIVATE_KEY.txt" />
         <option value="$PROJECT_DIR$/mgj/alipay/ALIPAY_PUBLIC_KEY.txt" />
-        <option value="$PROJECT_DIR$/mgj/urls.py" />
-        <option value="$PROJECT_DIR$/templates/shopping/shopping.html" />
-        <option value="$PROJECT_DIR$/mgj/alipay/__init__.py" />
-        <option value="$PROJECT_DIR$/mgj/views.py" />
-        <option value="$PROJECT_DIR$/static/order/js/orderdetail.js" />
+        <option value="$PROJECT_DIR$/static/shopping/css/cart.css" />
         <option value="$PROJECT_DIR$/templates/order/orderdetail.html" />
+        <option value="$PROJECT_DIR$/static/order/js/orderdetail.js" />
+        <option value="$PROJECT_DIR$/dir/django_mgj.sql" />
+        <option value="$PROJECT_DIR$/mgj/alipay/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/shopping/shopping.html" />
+        <option value="$PROJECT_DIR$/dir/test.py" />
+        <option value="$PROJECT_DIR$/mgj/models.py" />
+        <option value="$PROJECT_DIR$/dir/text.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/static/shopping/js/cart.js" />
+        <option value="$PROJECT_DIR$/mgj/urls.py" />
+        <option value="$PROJECT_DIR$/mgj/views.py" />
+        <option value="$PROJECT_DIR$/templates/order/grtorder.html" />
+        <option value="$PROJECT_DIR$/static/productDetail/js/details.js" />
+        <option value="$PROJECT_DIR$/templates/mainPage/mainPage.html" />
+        <option value="$PROJECT_DIR$/static/productDetail/css/details.css" />
         <option value="$PROJECT_DIR$/templates/productDetail/productDetail.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1375" />
-    <option name="height" value="849" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -241,25 +266,37 @@
             <path>
               <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
+              <item name="dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="productDetail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="productDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -271,13 +308,13 @@
               <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="mainPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Django_mgj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_mgj" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="productDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,9 +325,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python1812/Python181AXF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -315,7 +353,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.text">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Django_mgj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dir" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dir/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="text" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Django_mgj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dir" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dir/text.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Django_mgj" type="Python.DjangoServer" factoryName="Django server">
       <module name="Django_mgj" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -339,6 +421,12 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.text" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -351,24 +439,24 @@
       <option name="presentableId" value="Default" />
       <updated>1552552114241</updated>
       <workItem from="1552552120394" duration="91882000" />
-      <workItem from="1552797073565" duration="20188000" />
+      <workItem from="1552797073565" duration="41053000" />
+      <workItem from="1552957490931" duration="12146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112070000" />
+    <option name="totallyTimeSpent" value="145081000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1375" height="849" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.039127164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116639026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" weight="0.6555407" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295099" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32825485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -377,14 +465,15 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28304407" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17659353" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="File Transfer" order="14" weight="0.8684211" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Database" order="4" weight="0.1324304" />
+      <window_info anchor="right" id="Database" order="4" weight="0.13985628" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -414,30 +503,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/mainPage/mainPage.html</url>
-          <line>532</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/img/Image01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/Image04.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/newImg/background01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/newImg/background07.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/newImg/pic8.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -516,38 +582,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_goods">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/productDetail/js/details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="246" column="27" selection-start-line="246" selection-start-column="27" selection-end-line="246" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_cart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_productdetail">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -561,25 +596,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/shopping/js/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mgj/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/login/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -595,31 +613,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dir/django_mgj.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Django_mgj/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/shopping/css/cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-428">
-          <caret line="343" selection-start-line="343" selection-end-line="343" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/productDetail/css/details.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="693" column="6" lean-forward="true" selection-start-line="693" selection-start-column="6" selection-end-line="693" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -651,12 +648,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mgj/urls.py">
+    <entry file="file://$PROJECT_DIR$/static/shopping/css/cart.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="420">
+          <caret line="378" column="18" lean-forward="true" selection-start-line="378" selection-start-column="18" selection-end-line="378" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/django_mgj.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgj/alipay/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#612#1278#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_goods">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/test.py" />
+    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_cart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dir/text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/order/orderdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgj/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/order/js/orderdetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reqirement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shopping/shopping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1058">
+          <caret line="153" column="29" selection-start-line="153" selection-start-column="29" selection-end-line="153" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/shopping/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -668,59 +747,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mgj/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/order/grtorder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+        <state relative-caret-position="24">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/order/js/orderdetail.js">
+    <entry file="file://$PROJECT_DIR$/static/productDetail/js/details.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/order/orderdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mgj/alipay/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#612#1278#0" />
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mgj/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mgj/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="379" column="48" selection-start-line="379" selection-start-column="48" selection-end-line="379" selection-end-column="48" />
+        <state relative-caret-position="239">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shopping/shopping.html">
+    <entry file="das://4b2129cb-d146-489c-b358-7b84bc574502/schema/django_mgj/table/mgj_productdetail">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mainPage/mainPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="216">
+          <caret line="444" column="13" selection-start-line="444" selection-start-column="13" selection-end-line="444" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/productDetail/css/details.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="729" column="23" selection-start-line="729" selection-start-column="23" selection-end-line="729" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/productDetail/productDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+        <state relative-caret-position="310">
+          <caret line="361" column="44" selection-start-line="361" selection-start-column="44" selection-end-line="361" selection-end-column="44" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

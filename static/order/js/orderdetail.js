@@ -1,4 +1,11 @@
 $(function () {
+    $('.status').each(function () {
+        console.log( $(this).attr('status') )
+        if($(this).attr('status')!=0){
+            $(this).next().children().remove()
+        }
+    })
+
     $('.alipay').click(function () {
         // 发起支付请求
         request_data = {

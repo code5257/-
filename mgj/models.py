@@ -35,6 +35,8 @@ class Cart(models.Model):
     isselect = models.BooleanField(default=True)
     # 是否删除(用于下单后，购物车中删除)
     isdelete = models.BooleanField(default=False)
+    #小计 金额
+    cartmoney = models.DecimalField(max_digits=6,decimal_places=2)
 
 #订单 对应哪个用户(user)和订单商品(orderproduct)
 class Order(models.Model):
@@ -49,7 +51,7 @@ class Order(models.Model):
     #订单号
     orderid = models.CharField(max_length=256)
     #订单金额
-    ordermoney = models.FloatField(default=0)
+    ordermoney = models.DecimalField(max_digits=6,decimal_places=2)
 
 #对应订单(order)和商品(productdetail)
 class Orderproduct(models.Model):
@@ -60,4 +62,3 @@ class Orderproduct(models.Model):
 
     ## 商品数量
     number = models.IntegerField()
-    #此订单数额

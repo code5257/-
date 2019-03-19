@@ -142,9 +142,11 @@
 {#                </div>#}
 
                 <th class="goodprice" goodprice={{ cart.productdetail.price }}>单价{{ cart.productdetail.price }} （元）</th>
-                <th class="goodnum" productnumber={{ cart.productnumber }}><span class="minus"></span>{{ cart.productnumber }}<span class="plus"></span></th>
-                <th class="goodssum">{{ cart.productdetail.price }}×{{ cart.productnumber }}</th>
+{#                <th class="goodnum" productnumber={{ cart.productnumber }}><button class="minus" id="subbutton"></button>{{ cart.productnumber }}<button class="plus" id="addbutton"></button></th>#}
+                <th class="goodnum" productnumber={{ cart.productnumber }}>{{ cart.productnumber }}</th>
+                <th class="goodssum">{{ cart.cartmoney }}</th>
                 <th class="goodsctrl">待下单</th>
+                <th><button class="removebutton" cartid={{ cart.id }}>移除</button></th>
             </tr>
             {% endfor %}
 

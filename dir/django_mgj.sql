@@ -291,7 +291,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('ikp03yrwwbrjiuttge08pt4zx89168r5','ZjQyYjZhZWQwYzdlNTc2NDFjN2ZiOTI1ZDQzZWVjMzA4MGJhYmRlYzp7InRva2VuIjoiODExNmU0ZDc3ZWJhZTA3YWRjYWM0NWU5YWU2NTNlNTMifQ==','2019-03-30 14:52:06.883917');
+INSERT INTO `django_session` VALUES ('7pjnsl5arq2v18tod3fl4dp14rbkfh0g','YWY1Yjc2MTkyYTNmMDUzYTAzNjk2YjBlYTllYzcyYmViYWRmNjMyNDp7InRva2VuIjoiYTY2MmZjOTRhNDA4YzQ1MDE0YjQzNjMyYjlmN2I4ODQifQ==','2019-04-01 06:24:34.111754'),('ikp03yrwwbrjiuttge08pt4zx89168r5','ZjQyYjZhZWQwYzdlNTc2NDFjN2ZiOTI1ZDQzZWVjMzA4MGJhYmRlYzp7InRva2VuIjoiODExNmU0ZDc3ZWJhZTA3YWRjYWM0NWU5YWU2NTNlNTMifQ==','2019-03-30 14:52:06.883917');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -314,7 +314,7 @@ CREATE TABLE `mgj_cart` (
   KEY `mgj_cart_user_id_33455171_fk_mgj_user_id` (`user_id`),
   CONSTRAINT `mgj_cart_productdetail_id_1d5e101e_fk_mgj_productdetail_id` FOREIGN KEY (`productdetail_id`) REFERENCES `mgj_productdetail` (`id`),
   CONSTRAINT `mgj_cart_user_id_33455171_fk_mgj_user_id` FOREIGN KEY (`user_id`) REFERENCES `mgj_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -323,7 +323,7 @@ CREATE TABLE `mgj_cart` (
 
 LOCK TABLES `mgj_cart` WRITE;
 /*!40000 ALTER TABLE `mgj_cart` DISABLE KEYS */;
-INSERT INTO `mgj_cart` VALUES (4,2,0,0,7,2);
+INSERT INTO `mgj_cart` VALUES (5,2,1,0,8,3);
 /*!40000 ALTER TABLE `mgj_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -371,7 +371,7 @@ CREATE TABLE `mgj_order` (
   PRIMARY KEY (`id`),
   KEY `mgj_order_user_id_8ed0b463_fk_mgj_user_id` (`user_id`),
   CONSTRAINT `mgj_order_user_id_8ed0b463_fk_mgj_user_id` FOREIGN KEY (`user_id`) REFERENCES `mgj_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -380,7 +380,7 @@ CREATE TABLE `mgj_order` (
 
 LOCK TABLES `mgj_order` WRITE;
 /*!40000 ALTER TABLE `mgj_order` DISABLE KEYS */;
-INSERT INTO `mgj_order` VALUES (1,'2019-03-16 09:58:20.161438','2019-03-16 14:52:09.284423',0,'15527303002608',2,55),(2,'2019-03-16 11:14:54.215757','2019-03-16 14:52:09.304742',0,'15527348941672',2,49.9),(5,'2019-03-16 13:43:29.101530','2019-03-16 14:52:09.323719',0,'15527438096169',2,9.9);
+INSERT INTO `mgj_order` VALUES (1,'2019-03-16 09:58:20.161438','2019-03-18 06:38:47.287332',0,'15527303002608',2,55),(2,'2019-03-16 11:14:54.215757','2019-03-18 06:38:47.293318',0,'15527348941672',2,49.9),(5,'2019-03-16 13:43:29.101530','2019-03-18 06:38:47.304812',0,'15527438096169',2,9.9),(6,'2019-03-18 06:15:02.396711','2019-03-18 06:38:47.314388',0,'15528897025041',2,39.8);
 /*!40000 ALTER TABLE `mgj_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -401,7 +401,7 @@ CREATE TABLE `mgj_orderproduct` (
   KEY `mgj_orderproduct_products_id_1b7f2bf6_fk_mgj_productdetail_id` (`products_id`),
   CONSTRAINT `mgj_orderproduct_order_id_81337210_fk_mgj_order_id` FOREIGN KEY (`order_id`) REFERENCES `mgj_order` (`id`),
   CONSTRAINT `mgj_orderproduct_products_id_1b7f2bf6_fk_mgj_productdetail_id` FOREIGN KEY (`products_id`) REFERENCES `mgj_productdetail` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -410,7 +410,7 @@ CREATE TABLE `mgj_orderproduct` (
 
 LOCK TABLES `mgj_orderproduct` WRITE;
 /*!40000 ALTER TABLE `mgj_orderproduct` DISABLE KEYS */;
-INSERT INTO `mgj_orderproduct` VALUES (1,1,1,8),(2,1,2,6),(3,1,5,5);
+INSERT INTO `mgj_orderproduct` VALUES (1,1,1,8),(2,1,2,6),(3,1,5,5),(4,2,6,4);
 /*!40000 ALTER TABLE `mgj_orderproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -459,7 +459,7 @@ CREATE TABLE `mgj_user` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -468,7 +468,7 @@ CREATE TABLE `mgj_user` (
 
 LOCK TABLES `mgj_user` WRITE;
 /*!40000 ALTER TABLE `mgj_user` DISABLE KEYS */;
-INSERT INTO `mgj_user` VALUES (1,'a123','a12345'),(2,'aaa','0b4e7a0e5fe84ad35fb5f95b9ceeac79');
+INSERT INTO `mgj_user` VALUES (1,'a123','a12345'),(2,'aaa','0b4e7a0e5fe84ad35fb5f95b9ceeac79'),(3,'aaaa','0b4e7a0e5fe84ad35fb5f95b9ceeac79');
 /*!40000 ALTER TABLE `mgj_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -481,4 +481,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-16 21:57:00
+-- Dump completed on 2019-03-18  0:07:46

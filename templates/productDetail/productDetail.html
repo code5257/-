@@ -9,6 +9,13 @@
     <link href={% static "productDetail/css/details.css" %} rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src={% static "productDetail/js/details.js" %}></script>
     <script type="text/javascript" src={% static "productDetail/js/jquery.cookie.js" %}></script>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body class=".media_screen_1200">
 <!--右边导航栏-->
@@ -250,17 +257,18 @@
 <div class="nav">
     <div class="nav-con">
         <ul class="nav-list">
-            <li><a href="#">首页</a></li>
-            <li class="all"><a href="#">全部商品</a></li>
-            <li><a href="#">店长推荐款</a></li>
-            <li><a href="#">九月上新</a></li>
+            <li><a href={% url 'mgj:mainPage' %}>首页</a></li>
+            <li class="all"><a href="#">店长推荐</a></li>
+            <li><a href="../../#abc">全部商品</a></li>
+            <li><a href="../../#look">九月上新</a></li>
         </ul>
         <div class="sec_list">
             <dl>
-                <dd><a href="#">店长推荐款</a></dd>
-                <dd><a href="#">运动鞋</a></dd>
-                <dd><a href="#">女单鞋</a></dd>
-                <dd><a href="#">9月上新</a></dd>
+                <dd><a href={% url 'mgj:productDetail' 8 %}>文艺衬衫</a></dd>
+                <dd><a href={% url 'mgj:productDetail' 7 %}>运动服</a></dd>
+                <dd><a href={% url 'mgj:productDetail' 6 %}>防晒衣</a></dd>
+                <dd><a href={% url 'mgj:productDetail' 4 %}>眉笔</a></dd>
+                <dd><a href={% url 'mgj:productDetail' 5 %}>护手霜</a></dd>
             </dl>
         </div>
     </div>
@@ -278,7 +286,7 @@
                     <div class="smallArea"></div>
                 </div>
                 <div class="smallImg">
-{#                    <img src={% static  product.smallImg %} alt="">#}
+                    {#                    <img src={% static  product.smallImg %} alt="">#}
                 </div>
             </div>
             <div class="product-info">
@@ -334,14 +342,23 @@
                 <div class="count">
                     <span>数量：</span>
                     <span class="minus"></span>
-                    <input type="text" value="1" class="countnum">
+                    <input type="text" value="1" class="countnum"  data-toggle="popover" data-placement="top" data-content="提醒：购买数量请小于库存！">
+
+
+{#                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"#}
+{#                            data-placement="top"#}
+{#                            data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">#}
+{#                        Popover on 顶部#}
+{#                    </button>#}
+
+
                     <span class="plus"></span>
                     <span class="store">库存<b class="storenum">{{ product.store }}</b>件</span>
                 </div>
                 <div class="btn">
-                    <a href="#" class="buynow">立刻购买</a>
+{#                    <a href='#' class="buynow">立刻购买</a>#}
 
-{#                    <a href="#" class="addtocart">加入购物车</a>#}
+                    {#                    <a href="#" class="addtocart">加入购物车</a>#}
                     <button class="addtocart">加入购物车</button>
                 </div>
                 <div class="share">
